@@ -1,4 +1,10 @@
-const factorial = (num) => {
-  if (num === 0) return 1;
-  return num * factorial(num - 1);
+const bubbleSort = (arr) => {
+  for (let i = 0; i < arr.length; i++) {
+    for (let j = 0; j < arr.length - i - 1; j++) {
+      if (arr[j] > arr[j + 1]) {
+        [arr[j], arr[j + 1]] = [arr[j + 1], arr[j]];
+      }
+    }
+  }
+  return arr;
 };
